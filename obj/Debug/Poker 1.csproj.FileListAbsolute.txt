@@ -1,0 +1,16 @@
+C:\Users\ariel\source\repos\Poker 1\obj\Debug\Poker 1.csprojAssemblyReference.cache
+C:\Users\ariel\source\repos\Poker 1\obj\Debug\Poker_1.MainForm.resources
+C:\Users\ariel\source\repos\Poker 1\obj\Debug\Poker_1.Properties.Resources.resources
+C:\Users\ariel\source\repos\Poker 1\obj\Debug\Poker 1.csproj.GenerateResource.cache
+C:\Users\ariel\source\repos\Poker 1\bin\Debug\Poker 1.exe.config
+C:\Users\ariel\source\repos\Poker 1\bin\Debug\Poker 1.exe
+C:\Users\ariel\source\repos\Poker 1\bin\Debug\Poker 1.pdb
+C:\Users\ariel\source\repos\Poker 1\obj\Debug\Poker 1.exe
+C:\Users\ariel\source\repos\Poker 1\obj\Debug\Poker 1.pdb
+C:\Users\ariel\source\repos\Poker 1\obj\Debug\Poker_1.SettingsForm.resources
+C:\Users\ariel\source\repos\Poker 1\bin\Debug\MoreLinq.dll
+C:\Users\ariel\source\repos\Poker 1\bin\Debug\System.ValueTuple.dll
+C:\Users\ariel\source\repos\Poker 1\bin\Debug\MoreLinq.pdb
+C:\Users\ariel\source\repos\Poker 1\bin\Debug\MoreLinq.xml
+C:\Users\ariel\source\repos\Poker 1\bin\Debug\System.ValueTuple.xml
+C:\Users\ariel\source\repos\Poker 1\obj\Debug\Poker 1.csproj.CopyComplete

@@ -1,0 +1,10 @@
+C:\Users\ariel\source\repos\Poker 1\bin\Release\Poker 1.exe.config
+C:\Users\ariel\source\repos\Poker 1\bin\Release\Poker 1.exe
+C:\Users\ariel\source\repos\Poker 1\bin\Release\Poker 1.pdb
+C:\Users\ariel\source\repos\Poker 1\obj\Release\Poker 1.csprojAssemblyReference.cache
+C:\Users\ariel\source\repos\Poker 1\obj\Release\Poker_1.MainForm.resources
+C:\Users\ariel\source\repos\Poker 1\obj\Release\Poker_1.Properties.Resources.resources
+C:\Users\ariel\source\repos\Poker 1\obj\Release\Poker_1.SettingsForm.resources
+C:\Users\ariel\source\repos\Poker 1\obj\Release\Poker 1.csproj.GenerateResource.cache
+C:\Users\ariel\source\repos\Poker 1\obj\Release\Poker 1.exe
+C:\Users\ariel\source\repos\Poker 1\obj\Release\Poker 1.pdb
