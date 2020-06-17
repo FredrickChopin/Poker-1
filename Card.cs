@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Diagnostics;
-using System.Threading;
 using static Poker_1.GlobalVars;
 using MoreLinq;
 // put calling and betting into a moves method (done)
@@ -13,10 +12,10 @@ using MoreLinq;
 // need to improve pairs and threes (done)
 // RankHand now works for combinedArrays of lengths that are <7 (Perhaps useful in Later computer's decision making)
 // RankHand now also sees 2,3,4,5,14 as straights (done)
-// need to add BlindBetting :
+// need to add BlindBetting : (done)
 // change deal initial
 // change deal card
-// change computer move
+// change computer move (was not needed)
 // need to improve rank hands (perhaps pairs, threes and fours) (done)
 // Disable betting, chcking and folding if one's loses his money (done)
 
@@ -29,7 +28,6 @@ namespace Poker_1
         public static bool pStarts = true;
         public static int miniRound = 1;
         public static Random rnd = new Random();
-        //public static Stopwatch stopWatch = new Stopwatch();
     }
 
     public static class Moves
@@ -96,10 +94,15 @@ namespace Poker_1
                 continueToolStripMenuItem.Enabled = false;
                 while (table.Count < 5)
                 {
-                    Thread.Sleep(2200);
+                    //Thread.Sleep(1000);
                     Card.DealAnotherCard(table, cards);
                 }
-                Thread.Sleep(1500);
+                Card.UpdateAll
+                    (
+                    numericBet, pHand, computerHand, table, picturesPHand, picturesTable, picturesCHand, lblCMoneyValue, lblPMoneyValue, lblCMoneyBetValue, lblPMoneyBetValue, cMoney, pMoney, cMoneyBet, pMoneyBet,
+                    bigStake
+                    );
+                Card.SetComputerCardPicturesToRed(picturesCHand);
                 int[] computerRank = Card.RankHand(table, computerHand);
                 int[] playerRank = Card.RankHand(table, pHand);
                 char winner = Card.DetermineWinner(playerRank, computerRank);
@@ -112,7 +115,7 @@ namespace Poker_1
                 Card.DisableBtnsEnableContinue(btnBet, btnCall, btnFold, btnCheck, continueToolStripMenuItem);
 
             }
-            if (pStarts)
+            else if (pStarts)
             {
                 if (pMoneyBet == cMoneyBet)
                 {
@@ -699,9 +702,9 @@ namespace Poker_1
 
         public static void UpdateNumeric(NumericUpDown numericBet, int cMoney, int pMoney, int bigStake, int cMoneyBet, int pMoneyBet)
         {
-            numericBet.Maximum = Math.Min(cMoney, pMoney);
-            numericBet.Minimum = Math.Max(bigStake / 2, cMoneyBet - pMoneyBet + 1);
             numericBet.Increment = bigStake / 2;
+            numericBet.Maximum = Math.Max(cMoney, pMoney);
+            numericBet.Minimum = Math.Max(bigStake / 2, cMoneyBet - pMoneyBet + numericBet.Increment);     
         }
 
         public static void UpdateAll(NumericUpDown numericBet, Card[] pHand, Card[] computerHand, List<Card> table, PictureBox[] picturesPHand, PictureBox[] picturesTable, PictureBox[] picturesCHand, Label lblCMoneyValue, Label lblPMoneyValue, Label lblCMoneyBetValue, Label lblPMoneyBetValue, int cMoney, int pMoney, int cMoneyBet, int pMoneyBet, int bigStake)

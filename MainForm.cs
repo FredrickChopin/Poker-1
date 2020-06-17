@@ -42,9 +42,6 @@ namespace Poker_1
             Card.ShuffleCards(cards);
             Card.DealInitial(cards, pHand, cHand, table);
             Card.BetStakes(ref pMoney, ref cMoney, ref pMoneyBet, ref cMoneyBet, bigStake);
-            //Card.UpdateImages(pHand, cHand, table, picturesPHand, picturesTable, picturesCHand);
-            //Card.UpdateMoney(lblComputerTotalMoneyValue, lblPTotalMoneyValue, lblCMoneyInBetValue, lbPlMoneyInbetValue, cMoney, pMoney, cMoneyBet, pMoneyBet);
-            //Card.UpdateNumeric(numericBet, pMoney, bigStake);
             Card.UpdateAll
                 (
                 numericBet, pHand, cHand, table, picturesPHand, picturesTable, picturesCHand, lblComputerTotalMoneyValue,
@@ -109,11 +106,11 @@ namespace Poker_1
         {
             if (cMoney <= 0)
             {
-                MessageBox.Show("Computer lost all of his money!", "Game over");
+                MessageBox.Show("The computer has lost all of his money!", "Game over!");
             }
             else if (pMoney <= 0)
             {
-                MessageBox.Show("Player lost all of his money!", "Game over");
+                MessageBox.Show("The player has lost all of his money!", "Game over!");
             }
             else
             {
@@ -129,8 +126,10 @@ namespace Poker_1
                     bigStake
                     );
                 Card.SetComputerCardPicturesToRed(picturesCHand);
-                picturesTable[4].Visible = false;
-                picturesTable[3].Visible = false;                
+                foreach (PictureBox box in picturesTable)
+                {
+                    box.Visible = false;
+                }
                 btnBet.Enabled = true;
                 btnCall.Enabled = true;
                 btnFold.Enabled = true;
